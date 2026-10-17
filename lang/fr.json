@@ -42,7 +42,7 @@
   "setup.a.s3": "Ouvre l'onglet Developer et clique sur <strong>Start Server</strong> (port 1234).",
   "setup.a.s4": "C'est tout — PROCE55US utilise LM&nbsp;Studio par défaut.",
   "setup.b.title": "Dans le cloud — ta clé API",
-  "setup.b.badge": "niveaux gratuits",
+  "setup.b.badge": "gratuits",
   "setup.b.s1": "Crée une clé API gratuite chez Google AI&nbsp;Studio, Groq, Mistral ou OpenRouter.",
   "setup.b.s2": "Dans PROCE55US, clique sur l'icône ⚙ dans la barre d'outils.",
   "setup.b.s3": "Choisis le fournisseur, colle la clé — c'est fait.",
