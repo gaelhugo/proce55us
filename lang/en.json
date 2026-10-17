@@ -11,7 +11,7 @@
   "cta.download": "Download for macOS",
   "cta.github": "View on GitHub →",
   "shot.alt": "The PROCE55US app: prompts and code cells on the left, live preview on the right",
-  "features.title": "Made for teaching creative coding.",
+  "features.title": "Made for teaching creative coding with open source models.",
   "features.lead": "Students read a prompt, see the code it produces, tweak, regenerate — and watch the sketch evolve one step at a time.",
   "f1.title": "Prompt-driven steps",
   "f1.text": "Each cell is a written intention. The model generates the code; the preview runs it instantly. Edit the prompt, regenerate the code.",
