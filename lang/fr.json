@@ -41,7 +41,7 @@
   "setup.a.s2": "Dans son onglet 🔍 Search, choisis un modèle de code — <code>Qwen2.5-Coder-7B</code> est un bon début — et clique sur Download.",
   "setup.a.s3": "Ouvre l'onglet Developer et clique sur <strong>Start Server</strong> (port 1234).",
   "setup.a.s4": "C'est tout — PROCE55US utilise LM&nbsp;Studio par défaut.",
-  "setup.b.title": "Dans le cloud — ta clé API",
+  "setup.b.title": "Cloud — APIs",
   "setup.b.badge": "gratuit",
   "setup.b.s1": "Crée une clé API gratuite chez Google AI&nbsp;Studio, Groq, Mistral ou OpenRouter.",
   "setup.b.s2": "Dans PROCE55US, clique sur l'icône ⚙ dans la barre d'outils.",
