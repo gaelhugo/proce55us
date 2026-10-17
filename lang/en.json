@@ -32,7 +32,7 @@
   "dl.button": "Download the .dmg",
   "dl.meta": "macOS 12 or later · Apple Silicon & Intel ·",
   "dl.fine": "<strong>First launch:</strong> macOS warns that the app « cannot be opened » — it isn't notarized with a paid Apple certificate. Click <strong>Done</strong>, then go to <strong>System&nbsp;Settings → Privacy&nbsp;&amp;&nbsp;Security → Open&nbsp;Anyway</strong> and confirm. It opens normally from then on.",
-  "dl.repo": "see the <a href=\"https://github.com/gaelhugo/ECAL_MID_1_2027\">repository</a>.",
+  "dl.repo": "see the <a href=\"https://github.com/gaelhugo/ECAL_MID_1_2027/tree/main/Tools/AgentCodingWithLMStudio\">repository</a>.",
   "setup.title": "Set it up in two minutes.",
   "setup.lead": "PROCE55US needs a language model. Pick local — private and free — or a cloud key.",
   "setup.a.title": "Local — LM Studio",
