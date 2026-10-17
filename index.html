@@ -87,6 +87,26 @@
       nav a + a {
         margin-left: 28px;
       }
+      nav .langs {
+        margin-left: 28px;
+        opacity: 0.7;
+      }
+      nav .langs button {
+        background: none;
+        border: 0;
+        padding: 0;
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+        opacity: 0.55;
+      }
+      nav .langs button:hover,
+      nav .langs button.on {
+        opacity: 1;
+      }
+      nav .langs button.on {
+        font-weight: 700;
+      }
 
       /* ---------- hero ---------- */
       .hero {
@@ -338,18 +358,30 @@
         <img src="assets/icon.png" alt="PROCE55US icon" />
         <span class="name">PROCE55US</span>
         <span class="spacer"></span>
-        <a href="#features">Features</a>
-        <a href="#how">How it works</a>
-        <a href="#download">Download</a>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#how" data-i18n="nav.how">How it works</a>
+        <a href="#download" data-i18n="nav.download">Download</a>
         <a href="https://github.com/gaelhugo/ECAL_MID_1_2027">GitHub</a>
+        <span class="langs">
+          <button type="button" data-lang="fr">FR</button>·<button
+            type="button"
+            data-lang="en"
+          >
+            EN
+          </button>
+        </span>
       </div>
     </nav>
 
     <header class="hero wrap">
-      <p class="eyebrow">ECAL · Media &amp; Interaction Design</p>
+      <p class="eyebrow" data-i18n="hero.eyebrow">
+        ECAL · Media &amp; Interaction Design
+      </p>
       <h1>PROCE<span class="y">55</span>US</h1>
-      <p class="tagline">Prompt a PROCESSUS. Watch it draw.</p>
-      <p class="sub">
+      <p class="tagline" data-i18n="hero.tagline">
+        Prompt a PROCESSUS. Watch it draw.
+      </p>
+      <p class="sub" data-i18n="hero.sub">
         A creative-coding atelier: a notebook of steps where each cell pairs a
         natural-language prompt with the code a model writes for it — rendered
         live in a sandboxed preview.
@@ -358,11 +390,13 @@
         <a
           class="btn btn--primary"
           href="https://github.com/gaelhugo/ECAL_MID_1_2027/releases/latest"
+          data-i18n="cta.download"
           >Download for macOS</a
         >
         <a
           class="btn btn--ghost"
           href="https://github.com/gaelhugo/ECAL_MID_1_2027"
+          data-i18n="cta.github"
           >View on GitHub →</a
         >
       </div>
@@ -370,22 +404,23 @@
         <img
           src="assets/screenshot.png"
           alt="The PROCE55US app: prompts and code cells on the left, live preview on the right"
+          data-i18n-alt="shot.alt"
         />
       </div>
     </header>
 
     <section class="alt" id="features">
       <div class="wrap">
-        <h2>Made for teaching creative coding.</h2>
-        <p class="lead">
+        <h2 data-i18n="features.title">Made for teaching creative coding.</h2>
+        <p class="lead" data-i18n="features.lead">
           Students read a prompt, see the code it produces, tweak, regenerate —
           and watch the sketch evolve one step at a time.
         </p>
         <div class="grid">
           <div class="card reveal">
             <div class="ico">✦</div>
-            <h3>Prompt-driven steps</h3>
-            <p>
+            <h3 data-i18n="f1.title">Prompt-driven steps</h3>
+            <p data-i18n="f1.text">
               Each cell is a written intention. The model generates the code;
               the preview runs it instantly. Edit the prompt, regenerate the
               code.
@@ -393,24 +428,24 @@
           </div>
           <div class="card reveal">
             <div class="ico">&lt;/&gt;</div>
-            <h3>Editable code</h3>
-            <p>
+            <h3 data-i18n="f2.title">Editable code</h3>
+            <p data-i18n="f2.text">
               The generated code isn't locked: students can read it, edit it
               directly in the cell, and rerun — or regenerate from the prompt.
             </p>
           </div>
           <div class="card reveal">
             <div class="ico">▸</div>
-            <h3>Live preview</h3>
-            <p>
+            <h3 data-i18n="f3.title">Live preview</h3>
+            <p data-i18n="f3.text">
               Cells replay in order inside a sandboxed page. No build step, no
               tooling — the result appears as soon as the code does.
             </p>
           </div>
           <div class="card reveal">
             <div class="ico">⌂</div>
-            <h3>Local-first AI</h3>
-            <p>
+            <h3 data-i18n="f4.title">Local-first AI</h3>
+            <p data-i18n="f4.text">
               Works fully offline with LM Studio. Prefer the cloud? Switch to a
               free Google, Groq, Mistral or OpenRouter key in one click.
             </p>
@@ -421,28 +456,28 @@
 
     <section id="how">
       <div class="wrap">
-        <h2>How it works.</h2>
+        <h2 data-i18n="how.title">How it works.</h2>
         <div class="steps">
           <div class="step reveal">
             <div class="n">1</div>
-            <h3>Write a prompt</h3>
-            <p>
+            <h3 data-i18n="s1.title">Write a prompt</h3>
+            <p data-i18n="s1.text">
               Describe what the code should do — “fill the canvas with animated
               particles” — in plain language.
             </p>
           </div>
           <div class="step reveal">
             <div class="n">2</div>
-            <h3>Generate</h3>
-            <p>
+            <h3 data-i18n="s2.title">Generate</h3>
+            <p data-i18n="s2.text">
               The model writes runnable JavaScript, aware of the cells above and
               the functions already defined.
             </p>
           </div>
           <div class="step reveal">
             <div class="n">3</div>
-            <h3>Run &amp; iterate</h3>
-            <p>
+            <h3 data-i18n="s3.title">Run &amp; iterate</h3>
+            <p data-i18n="s3.text">
               Cells replay in order in a live canvas. Undo, restart, or export
               the result as a standalone HTML page.
             </p>
@@ -454,19 +489,22 @@
     <section class="alt download" id="download">
       <div class="wrap">
         <img src="assets/icon.png" alt="PROCE55US icon" />
-        <h2>Download PROCE55US.</h2>
+        <h2 data-i18n="dl.title">Download PROCE55US.</h2>
         <div class="cta">
           <a
             class="btn btn--primary"
             href="https://github.com/gaelhugo/ECAL_MID_1_2027/releases/download/v1.0.0/proce55us-1.0.0-universal.dmg"
+            data-i18n="dl.button"
             >Download the .dmg</a
           >
         </div>
         <p class="meta">
-          macOS 12 or later · Apple Silicon &amp; Intel ·
+          <span data-i18n="dl.meta"
+            >macOS 12 or later · Apple Silicon &amp; Intel ·</span
+          >
           <code>proce55us-1.0.0-universal.dmg</code>
         </p>
-        <p class="fine">
+        <p class="fine" data-i18n="dl.fine">
           <strong>First launch:</strong> macOS warns that the app « cannot be
           opened » — it isn't notarized with a paid Apple certificate. Click
           <strong>Done</strong>, then go to
@@ -476,7 +514,7 @@
           >
           and confirm. It opens normally from then on.
         </p>
-        <p class="fine" style="margin-top: 12px">
+        <p class="fine" style="margin-top: 12px" data-i18n="dl.repo">
           see the
           <a href="https://github.com/gaelhugo/ECAL_MID_1_2027">repository</a>.
         </p>
@@ -485,7 +523,7 @@
 
     <footer>
       <div class="wrap">
-        <span>PROCE55US · ECAL MID</span>
+        <span data-i18n="footer.left">PROCE55US · ECAL MID</span>
         <span>
           <a href="https://github.com/gaelhugo/ECAL_MID_1_2027">GitHub</a> ·
           <a href="https://github.com/gaelhugo/ECAL_MID_1_2027/releases/latest"
@@ -496,6 +534,45 @@
     </footer>
 
     <script>
+      // i18n — dictionaries in lang/<lang>.json; embedded English is the fallback
+      async function setLang(lang) {
+        try {
+          const dict = await (await fetch(`lang/${lang}.json`)).json();
+          document.querySelectorAll("[data-i18n]").forEach((n) => {
+            const v = dict[n.dataset.i18n];
+            if (v != null) n.innerHTML = v;
+          });
+          document.querySelectorAll("[data-i18n-alt]").forEach((n) => {
+            const v = dict[n.dataset.i18nAlt];
+            if (v != null) n.setAttribute("alt", v);
+          });
+          if (dict["meta.title"]) document.title = dict["meta.title"];
+          if (dict["meta.description"])
+            document
+              .querySelector('meta[name="description"]')
+              .setAttribute("content", dict["meta.description"]);
+          document.documentElement.lang = lang;
+          localStorage.setItem("proce55us.lang", lang);
+          document
+            .querySelectorAll(".langs button")
+            .forEach((b) => b.classList.toggle("on", b.dataset.lang === lang));
+        } catch {
+          /* JSON unreachable (e.g. file://) — keep embedded English */
+        }
+      }
+      const savedLang = localStorage.getItem("proce55us.lang");
+      const guessLang = (navigator.language || "en")
+        .toLowerCase()
+        .startsWith("fr")
+        ? "fr"
+        : "en";
+      setLang(savedLang || guessLang);
+      document
+        .querySelectorAll(".langs button")
+        .forEach((b) =>
+          b.addEventListener("click", () => setLang(b.dataset.lang)),
+        );
+
       const io = new IntersectionObserver(
         (entries) =>
           entries.forEach(
