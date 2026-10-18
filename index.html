@@ -6,7 +6,7 @@
     <title>PROCE55US — Prompt a processus. Watch it draw.</title>
     <meta
       name="description"
-      content="PROCE55US is a creative-coding atelier: a notebook of steps where each cell pairs a natural-language prompt with the code an AI model generates, rendered live in a sandboxed preview."
+      content="PROCE55US is a creative-coding atelier: a notebook of steps where each cell pairs a natural-language prompt with the code an AI model generates — in JavaScript, p5.js, three.js or plain DOM — rendered live in a sandboxed preview."
     />
     <link rel="icon" href="assets/icon.png" />
     <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet" />
@@ -238,6 +238,49 @@
         font-size: 14px;
         line-height: 1.5;
         color: var(--grey);
+      }
+
+      /* ---------- modes ---------- */
+      .modes-title {
+        margin-top: 88px;
+        text-align: center;
+        font-size: clamp(24px, 3.4vw, 32px);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      .modes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+        margin-top: 40px;
+      }
+      .mode {
+        background: var(--black);
+        color: #fff;
+        border-radius: var(--radius);
+        padding: 22px 22px 24px;
+      }
+      .mode-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        min-height: 26px;
+        margin-bottom: 8px;
+      }
+      .mode strong {
+        font-family: ui-monospace, "SF Mono", Menlo, monospace;
+        font-size: 16px;
+        color: var(--yellow);
+      }
+      .mode .pill {
+        background: var(--yellow);
+        color: var(--black);
+      }
+      .mode p {
+        font-size: 14px;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.68);
       }
 
       /* ---------- steps ---------- */
@@ -584,6 +627,47 @@
             </p>
           </div>
         </div>
+
+        <h3 class="modes-title" data-i18n="modes.title">
+          Four modes, one notebook.
+        </h3>
+        <p class="lead" data-i18n="modes.lead">
+          Each PROCESSUS picks its environment. The preview, the instructions
+          given to the model and the export adapt to it — with a ready-made
+          example for each.
+        </p>
+        <div class="modes">
+          <div class="mode reveal">
+            <div class="mode-head">
+              <strong>JavaScript</strong>
+              <span class="pill" data-i18n="modes.default">default</span>
+            </div>
+            <p data-i18n="modes.js">
+              Canvas 2D drawing, pixels and animation loops, in plain
+              JavaScript.
+            </p>
+          </div>
+          <div class="mode reveal">
+            <div class="mode-head"><strong>p5.js</strong></div>
+            <p data-i18n="modes.p5">
+              Processing's spirit for the web: setup(), draw(), shapes and
+              interaction.
+            </p>
+          </div>
+          <div class="mode reveal">
+            <div class="mode-head"><strong>three.js</strong></div>
+            <p data-i18n="modes.three">
+              3D scenes in WebGL: meshes, lights, camera and orbit controls.
+            </p>
+          </div>
+          <div class="mode reveal">
+            <div class="mode-head"><strong>DOM</strong></div>
+            <p data-i18n="modes.dom">
+              A whole web page: HTML elements, CSS and interactions — not just a
+              canvas.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -603,16 +687,17 @@
             <div class="n">2</div>
             <h3 data-i18n="s2.title">Generate</h3>
             <p data-i18n="s2.text">
-              The model writes runnable JavaScript, aware of the cells above and
-              the functions already defined.
+              The model writes runnable code for the chosen mode — JavaScript,
+              p5.js, three.js or DOM — aware of the cells above and the
+              functions already defined.
             </p>
           </div>
           <div class="step reveal">
             <div class="n">3</div>
             <h3 data-i18n="s3.title">Run &amp; iterate</h3>
             <p data-i18n="s3.text">
-              Cells replay in order in a live canvas. Undo, restart, or export
-              the result as a standalone HTML page.
+              Cells replay in order in the live preview. Undo, restart, or
+              export the result as a standalone HTML page.
             </p>
           </div>
         </div>

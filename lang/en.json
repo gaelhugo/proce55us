@@ -1,6 +1,6 @@
 {
   "meta.title": "PROCE55US — Prompt a processus. Understand the code.",
-  "meta.description": "PROCE55US is a creative-coding atelier: a notebook of steps where each cell pairs a natural-language prompt with the code an AI model generates, rendered live in a sandboxed preview.",
+  "meta.description": "PROCE55US is a creative-coding atelier: a notebook of steps where each cell pairs a natural-language prompt with the code an AI model generates — in JavaScript, p5.js, three.js or plain DOM — rendered live in a sandboxed preview.",
   "nav.features": "Features",
   "nav.how": "How it works",
   "nav.setup": "Setup",
@@ -25,9 +25,9 @@
   "s1.title": "Write a prompt",
   "s1.text": "Describe what the code should do — “fill the canvas with animated particles” — in plain language.",
   "s2.title": "Generate",
-  "s2.text": "The model writes runnable JavaScript, aware of the cells above and the functions already defined.",
+  "s2.text": "The model writes runnable code for the chosen mode — JavaScript, p5.js, three.js or DOM — aware of the cells above and the functions already defined.",
   "s3.title": "Run & iterate",
-  "s3.text": "Cells replay in order in a live canvas. Undo, restart, or export the result as a standalone HTML page.",
+  "s3.text": "Cells replay in order in the live preview. Undo, restart, or export the result as a standalone HTML page.",
   "dl.title": "Download PROCE55US.",
   "dl.button": "Download the .dmg",
   "dl.meta": "macOS 12 or later · Apple Silicon & Intel ·",
@@ -46,5 +46,12 @@
   "setup.b.s1": "Get a free API key from Google AI&nbsp;Studio, Groq, Mistral or OpenRouter.",
   "setup.b.s2": "In PROCE55US, click the ⚙ gear in the toolbar.",
   "setup.b.s3": "Choose the provider, paste the key — done.",
+  "modes.title": "Four modes, one notebook.",
+  "modes.lead": "Each PROCESSUS picks its environment. The preview, the instructions given to the model and the export adapt to it — with a ready-made example for each.",
+  "modes.default": "default",
+  "modes.js": "Canvas 2D drawing, pixels and animation loops, in plain JavaScript.",
+  "modes.p5": "Processing's spirit for the web: setup(), draw(), shapes and interaction.",
+  "modes.three": "3D scenes in WebGL: meshes, lights, camera and orbit controls.",
+  "modes.dom": "A whole web page: HTML elements, CSS and interactions — not just a canvas.",
   "footer.left": "PROCE55US · ECAL MID"
 }
