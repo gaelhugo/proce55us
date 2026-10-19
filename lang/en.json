@@ -11,6 +11,7 @@
   "cta.download": "Download for macOS",
   "cta.github": "View on GitHub →",
   "shot.alt": "The PROCE55US app: prompts and code cells on the left, live preview on the right",
+  "shot.src": "assets/screenshot-en.png",
   "features.title": "Made for a better understanding of creative coding with open source models.",
   "features.lead": "Read a prompt, see the code it produces, tweak, regenerate — and watch the result evolve one step at a time.",
   "f1.title": "Prompt-driven steps",

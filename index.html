@@ -532,9 +532,10 @@
       </div>
       <div class="shot reveal">
         <img
-          src="assets/screenshot.png"
+          src="assets/screenshot-en.png"
           alt="The PROCE55US app: prompts and code cells on the left, live preview on the right"
           data-i18n-alt="shot.alt"
+          data-i18n-src="shot.src"
         />
       </div>
     </header>
@@ -828,6 +829,11 @@
           document.querySelectorAll("[data-i18n-alt]").forEach((n) => {
             const v = dict[n.dataset.i18nAlt];
             if (v != null) n.setAttribute("alt", v);
+          });
+          document.querySelectorAll("[data-i18n-src]").forEach((n) => {
+            const v = dict[n.dataset.i18nSrc];
+            if (v != null && n.getAttribute("src") !== v)
+              n.setAttribute("src", v);
           });
           if (dict["meta.title"]) document.title = dict["meta.title"];
           if (dict["meta.description"])
