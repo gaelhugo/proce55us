@@ -54,7 +54,6 @@
         background: rgba(251, 251, 253, 0.8);
         backdrop-filter: saturate(180%) blur(20px);
         -webkit-backdrop-filter: saturate(180%) blur(20px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       }
       nav .wrap {
         display: flex;
@@ -179,16 +178,13 @@
         display: block;
         border-radius: var(--radius);
         box-shadow:
-          0 24px 70px rgba(0, 0, 0, 0.18),
+          0 10px 30px rgba(0, 0, 0, 0.08),
           0 0 0 1px rgba(0, 0, 0, 0.05);
       }
 
       /* ---------- sections ---------- */
       section {
         padding: 96px 0;
-      }
-      .alt {
-        background: var(--bg-alt);
       }
       h2 {
         font-size: clamp(32px, 5vw, 48px);
@@ -439,7 +435,6 @@
       /* ---------- footer ---------- */
       footer {
         padding: 36px 0;
-        border-top: 1px solid rgba(0, 0, 0, 0.08);
         font-size: 12px;
         color: var(--grey);
       }
@@ -540,7 +535,7 @@
       </div>
     </header>
 
-    <section class="alt" id="features">
+    <section id="features">
       <div class="wrap">
         <h2 data-i18n="features.title">Made for teaching creative coding.</h2>
         <p class="lead" data-i18n="features.lead">
@@ -705,7 +700,7 @@
       </div>
     </section>
 
-    <section class="alt download" id="download">
+    <section class="download" id="download">
       <div class="wrap">
         <img src="assets/icon.png" alt="PROCE55US icon" />
         <h2 data-i18n="dl.title">Download PROCE55US.</h2>
