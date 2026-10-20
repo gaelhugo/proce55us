@@ -44,7 +44,7 @@
   "setup.a.badge": "recommended",
   "setup.a.s1": "Download <a href=\"https://lmstudio.ai\">LM&nbsp;Studio</a> — free, for any Mac.",
   "setup.a.s2": "In its 🔍 Search tab, pick a coding model — <code>Qwen2.5-Coder-7B</code> is a good start — and click Download.",
-  "setup.a.s3": "Open the Developer tab and press <strong>Start Server</strong> (port 1234). For the web editor, also turn on <strong>Enable CORS</strong> in its server settings.",
+  "setup.a.s3": "Open the Developer tab and press <strong>Start Server</strong> (port 1234). For the web editor, also turn on <strong>Enable CORS</strong> in its server settings — and allow “Local network” access in the browser's site settings if it asks.",
   "setup.a.s4": "That's it — PROCE55US uses LM&nbsp;Studio by default.",
   "setup.b.title": "Cloud — your API key",
   "setup.b.badge": "free tiers",
