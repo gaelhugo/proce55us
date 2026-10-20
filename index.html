@@ -876,9 +876,12 @@
         }
       }
       const savedLang = localStorage.getItem("proce55us.lang");
-      const guessLang = (navigator.language || "en")
-        .toLowerCase()
-        .startsWith("fr")
+      // Français si une langue préférée du navigateur commence par fr (fr-FR,
+      // fr-CH, fr-CA, fr-BE…), anglais pour toutes les autres
+      const langs = navigator.languages?.length
+        ? navigator.languages
+        : [navigator.language || "en"];
+      const guessLang = langs.some((l) => l.toLowerCase().startsWith("fr"))
         ? "fr"
         : "en";
       setLang(savedLang || guessLang);
