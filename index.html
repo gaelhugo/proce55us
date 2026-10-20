@@ -163,6 +163,13 @@
       .btn--primary:hover {
         background: #000;
       }
+      .btn--soft {
+        background: rgba(0, 0, 0, 0.06);
+        color: var(--black);
+      }
+      .btn--soft:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
       .btn--ghost {
         color: var(--black);
       }
@@ -484,6 +491,11 @@
         <a href="#setup" data-i18n="nav.setup">Setup</a>
         <a href="#download" data-i18n="nav.download">Download</a>
         <a
+          href="https://gaelhugo.github.io/editor.proce55us/"
+          data-i18n="nav.editor"
+          >Web editor</a
+        >
+        <a
           href="https://github.com/gaelhugo/ECAL_MID_1_2027/tree/main/Tools/AgentCodingWithLMStudio"
           >GitHub</a
         >
@@ -517,6 +529,12 @@
           href="https://github.com/gaelhugo/ECAL_MID_1_2027/releases/latest"
           data-i18n="cta.download"
           >Download for macOS</a
+        >
+        <a
+          class="btn btn--soft"
+          href="https://gaelhugo.github.io/editor.proce55us/"
+          data-i18n="cta.editor"
+          >Open in the browser</a
         >
         <a
           class="btn btn--ghost"
@@ -711,6 +729,12 @@
             data-i18n="dl.button"
             >Download the .dmg</a
           >
+          <a
+            class="btn btn--soft"
+            href="https://gaelhugo.github.io/editor.proce55us/"
+            data-i18n="dl.editor"
+            >Open the web editor</a
+          >
         </div>
         <p class="meta">
           <span data-i18n="dl.meta"
@@ -727,6 +751,10 @@
             Open&nbsp;Anyway</strong
           >
           and confirm. It opens normally from then on.
+        </p>
+        <p class="fine" data-i18n="dl.web">
+          <strong>Web editor:</strong> the same version as the macOS app,
+          nothing to install, on any computer. Updated with every release.
         </p>
         <p class="fine" style="margin-top: 12px" data-i18n="dl.repo">
           see the
@@ -764,7 +792,9 @@
               </li>
               <li data-i18n="setup.a.s3">
                 Open the Developer tab and press
-                <strong>Start Server</strong> (port 1234).
+                <strong>Start Server</strong> (port 1234). For the web editor,
+                also turn on <strong>Enable CORS</strong> in its server
+                settings.
               </li>
               <li data-i18n="setup.a.s4">
                 That's it — PROCE55US uses LM&nbsp;Studio by default.
