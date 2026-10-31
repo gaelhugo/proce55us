@@ -1,0 +1,36 @@
+#!/bin/sh
+# Installateur en une ligne pour PROCE55US (macOS Universal)
+# Usage : curl -fsSL https://proce55us.com/install.sh | sh
+set -eu
+
+if [ "$(uname -s)" != "Darwin" ]; then
+  echo "Erreur : cet installateur est réservé à macOS." >&2
+  exit 1
+fi
+
+ZIP_URL="https://github.com/gaelhugo/ECAL_MID_1_2027/releases/latest/download/proce55us-universal-mac.zip"
+APP_NAME="proce55us.app"
+DEST_DIR="/Applications"
+TMP_DIR="$(mktemp -d)"
+trap 'rm -rf "$TMP_DIR"' EXIT INT TERM
+
+echo "→ Downloading PROCE55US for macOS (Apple Silicon & Intel)…"
+curl -fL --progress-bar "$ZIP_URL" -o "$TMP_DIR/proce55us.zip"
+
+echo "→ Extracting $APP_NAME…"
+ditto -x -k "$TMP_DIR/proce55us.zip" "$TMP_DIR"
+
+echo "→ Installing to $DEST_DIR/$APP_NAME…"
+if [ -w "$DEST_DIR" ]; then
+  rm -rf "$DEST_DIR/$APP_NAME"
+  mv "$TMP_DIR/$APP_NAME" "$DEST_DIR/$APP_NAME"
+  xattr -cr "$DEST_DIR/$APP_NAME" 2>/dev/null || true
+else
+  sudo rm -rf "$DEST_DIR/$APP_NAME"
+  sudo mv "$TMP_DIR/$APP_NAME" "$DEST_DIR/$APP_NAME"
+  sudo xattr -cr "$DEST_DIR/$APP_NAME" 2>/dev/null || true
+fi
+
+echo "✓ PROCE55US installed in $DEST_DIR/$APP_NAME (quarantine removed)"
+echo "→ Launching PROCE55US…"
+open -a "$DEST_DIR/$APP_NAME"
