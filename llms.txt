@@ -1,0 +1,39 @@
+# PROCE55US — Prompt a processus. Understand the code.
+
+> PROCE55US is a free, open-source creative-coding atelier and step-by-step AI notebook developed at ECAL (École cantonale d'art de Lausanne) · Media & Interaction Design (MID) by Gaël Hugo. Each cell in a notebook ("processus") pairs a natural-language prompt (in English or French) with readable, commented, directly editable code in Vanilla JavaScript (2D Canvas), p5.js, three.js (WebGL 3D), or HTML/CSS DOM — rendered live in a sandboxed preview.
+
+## Key Links
+
+- [Official Website](https://proce55us.com/): Product overview, features, 4-step workflow, setup guide, and macOS downloads (English & French).
+- [Live Web Editor](https://editor.proce55us.com/): Run PROCE55US directly in the browser with local LM Studio or cloud API keys.
+- [Source Code Repository](https://github.com/gaelhugo/ECAL_MID_1_2027/tree/main/Tools/AgentCodingWithLMStudio): Open-source repository (Vanilla JS + Vite + Electron macOS build).
+- [Latest macOS Universal DMG](https://github.com/gaelhugo/ECAL_MID_1_2027/releases/latest/download/proce55us-universal.dmg): Universal macOS desktop app (Apple Silicon & Intel, macOS 12+).
+- [One-Line macOS Terminal Installer](https://proce55us.com/install): `curl -fsSL https://proce55us.com/install | sh`
+- [Homebrew Tap](https://github.com/gaelhugo/homebrew-proce55us): `brew install --cask gaelhugo/proce55us/proce55us`
+
+## Why PROCE55US? (Pedagogical & Creative Coding Philosophy)
+
+- **Step-by-step decomposition ("Processus"):** Instead of generating an opaque, monolithic script from a single chat prompt, PROCE55US breaks creative coding projects into sequential steps. Each step adds or refines one visual, structural, or interactive behavior.
+- **Readable & editable code:** Generated code is structured, commented in the user's language (English or French), and immediately editable inside each cell.
+- **Incremental `<script>` replay architecture:** Each step runs in its own `<script>` tag inside a sandboxed preview iframe in notebook order. Top-level variables (`const` / `let`) are declared once; evolving behaviors are written as functions that later steps can override. When prompting a cell, the model receives all preceding active cells plus an automatic `ProgramSummary` of defined functions.
+- **Round-trip standalone HTML export:** Every sketch can be downloaded as a single self-contained `.html` file (embedding a `<script id="proce55us" type="application/json">` manifest). Dragging and dropping that `.html` (or `.json`) file back into PROCE55US restores all prompt and code cells for continued editing.
+
+## Four Creative Coding Modes
+
+1. **JavaScript (`vanilla`, default):** Standard HTML5 2D Canvas API drawing, pixel manipulation, webcam/audio reactive visuals, and animation loops.
+2. **p5.js (`p5`, v1.11.13):** Processing's spirit for the web (`setup()`, `draw()`, 2D/WebGL shapes, typography, noise, and interaction).
+3. **three.js (`three`, r186):** 3D WebGL scenes (`window.THREE` and `THREE.OrbitControls` preloaded — meshes, lights, cameras, materials, shaders).
+4. **DOM (`dom`):** Full web page manipulation with HTML elements, CSS (`css()` helper), kinetic typography, and interactive layouts.
+
+## Supported AI Models & Providers
+
+- **Local & Offline (Default — Recommended):** [LM Studio](https://lmstudio.ai) running locally on `http://localhost:1234` (OpenAI-compatible API). Works offline with open-weight coding models such as `Qwen2.5-Coder-7B-Instruct`, `Qwen2.5-Coder-14B-Instruct`, `Qwen2.5-Coder-32B-Instruct`, `DeepSeek-Coder`, or `Mistral`.
+- **Cloud Providers (Free tiers supported):**
+  - Google Gemini (Google AI Studio API key)
+  - Groq (GroqCloud API key)
+  - Mistral AI (La Plateforme API key)
+  - OpenRouter (OpenRouter API key)
+
+## Résumé en français
+
+PROCE55US (https://proce55us.com/?lang=fr · éditeur web : https://editor.proce55us.com/) est un atelier de creative coding open source conçu à l'ECAL (École cantonale d'art de Lausanne — Media & Interaction Design) par Gaël Hugo. Il permet de créer et comprendre du code étape par étape (« processus ») en associant des prompts en langage naturel (français ou anglais) à du code modifiable en JavaScript (Canvas 2D), p5.js, three.js (WebGL 3D) ou DOM (HTML/CSS), avec aperçu en direct, IA locale via LM Studio (ou clés API cloud gratuites), et export/réouverture en fichier HTML autonome par glisser-déposer.

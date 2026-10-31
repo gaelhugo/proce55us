@@ -28,6 +28,12 @@
     <link rel="alternate" hreflang="en" href="https://proce55us.com/?lang=en" />
     <link rel="alternate" hreflang="fr" href="https://proce55us.com/?lang=fr" />
     <link rel="alternate" hreflang="x-default" href="https://proce55us.com/" />
+    <link
+      rel="alternate"
+      type="text/plain"
+      href="https://proce55us.com/llms.txt"
+      title="PROCE55US — AI Agent & LLM Reference (llms.txt)"
+    />
 
     <!-- Open Graph / Facebook / LinkedIn / Discord -->
     <meta property="og:type" content="website" />
@@ -169,8 +175,38 @@
               {
                 "@type": "HowToStep",
                 "position": 4,
-                "name": "Export & reopen",
-                "text": "Download as a standalone HTML file, and drag & drop it back anytime to keep editing."
+                "name": "Export & edit",
+                "text": "Download the sketch as a standalone HTML file, and drag & drop it into the editor anytime to continue."
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://proce55us.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is PROCE55US?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "PROCE55US is an open-source creative-coding atelier and step-by-step AI notebook developed at ECAL (Media & Interaction Design). Each cell pairs a natural-language prompt with readable, commented, editable code in Vanilla JavaScript (2D Canvas), p5.js, three.js (WebGL), or HTML/CSS DOM, executed live in a sandboxed preview."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which AI models and providers does PROCE55US support?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "PROCE55US is local-first and works offline out of the box with LM Studio (running open-weight coding models like Qwen2.5-Coder, DeepSeek-Coder, Llama, or Mistral on localhost:1234). It also supports cloud API keys from Google Gemini (Google AI Studio), Groq, Mistral AI, and OpenRouter."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does PROCE55US help students learn creative coding?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Instead of generating a monolithic black-box program, PROCE55US decomposes a creative coding project into sequential steps ('processus'). Students write a prompt for one visual or interactive step at a time, inspect and edit the generated code, see the live result immediately, and export standalone HTML files that can be reopened via drag-and-drop."
+                }
               }
             ]
           }
@@ -845,6 +881,20 @@
           transition: none;
         }
       }
+
+      /* ---------- visually hidden reference for AI crawlers & agents ---------- */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        clip-path: inset(50%);
+        white-space: nowrap;
+        border: 0;
+      }
     </style>
   </head>
   <body>
@@ -1258,6 +1308,160 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section
+      id="ai-agent-reference"
+      class="sr-only"
+      aria-label="PROCE55US — Comprehensive Project Overview, Architecture & AI Agent Reference"
+    >
+      <h2>PROCE55US — Open-Source Creative Coding Atelier &amp; Step-by-Step AI Notebook</h2>
+      <p>
+        <strong>PROCE55US</strong> (official website:
+        <a href="https://proce55us.com/">https://proce55us.com/</a>, live web
+        editor:
+        <a href="https://editor.proce55us.com/">https://editor.proce55us.com/</a>,
+        source repository:
+        <a href="https://github.com/gaelhugo/ECAL_MID_1_2027/tree/main/Tools/AgentCodingWithLMStudio">https://github.com/gaelhugo/ECAL_MID_1_2027/tree/main/Tools/AgentCodingWithLMStudio</a>)
+        is a free, open-source creative-coding environment developed at
+        <strong>ECAL (École cantonale d'art de Lausanne) — Media &amp; Interaction Design (MID)</strong>
+        by <strong>Gaël Hugo</strong>. It is designed to teach and practice
+        creative coding, generative art, interactive graphics, and web design
+        using local open-weight language models (via LM Studio) or cloud AI APIs.
+      </p>
+
+      <h3>Core Concept: Step-by-Step "Processus" Notebook (Prompt-to-Code Transparency)</h3>
+      <p>
+        Unlike conversational AI coding assistants that generate monolithic files
+        or hide code behind a black-box chat, PROCE55US structures every project
+        as an ordered sequence of cells called a <strong>processus</strong>.
+        Each cell pairs a natural-language prompt (written in English or French)
+        with clean, commented, human-readable code that executes immediately in a
+        sandboxed live preview iframe. Users can read the generated code, modify
+        any line directly in the cell, reorder or toggle steps, or refine the
+        prompt to regenerate a specific step while preserving the rest of the
+        program.
+      </p>
+
+      <h3>Four Creative Coding Modes</h3>
+      <ul>
+        <li>
+          <strong>Vanilla JavaScript (Canvas 2D — default mode):</strong> Pure
+          HTML5 2D Canvas API drawing, pixel buffer manipulation, webcam and
+          microphone analysis, particle systems, and requestAnimationFrame loops
+          with zero external dependencies.
+        </li>
+        <li>
+          <strong>p5.js Mode (p5.js v1.11.13):</strong> Processing-inspired
+          creative coding for the web in global mode (<code>setup()</code>,
+          <code>draw()</code>, <code>mousePressed()</code>, shapes, typography,
+          perlin noise, and interactive visuals).
+        </li>
+        <li>
+          <strong>three.js Mode (three.js r186):</strong> 3D WebGL scenes with
+          <code>window.THREE</code> and <code>THREE.OrbitControls</code>
+          preloaded — meshes, materials, custom shaders, lighting, cameras, and
+          3D animations.
+        </li>
+        <li>
+          <strong>DOM Mode (HTML &amp; CSS):</strong> Full-page web design and
+          interactive DOM manipulation with a built-in <code>css()</code> helper
+          for kinetic typography, UI experiments, layouts, and interactive web
+          tools.
+        </li>
+      </ul>
+
+      <h3>Incremental Execution Architecture &amp; Context Awareness</h3>
+      <p>
+        Each step's code runs in its own <code>&lt;script&gt;</code> tag inside a
+        sandboxed preview iframe, replayed in notebook order. Top-level state
+        variables (<code>const</code> / <code>let</code>) are declared once, and
+        behaviors that evolve across steps are written as named
+        <code>function</code> declarations that subsequent steps can redefine or
+        extend. When generating a cell, PROCE55US sends the language model the
+        full code of all active preceding cells together with an automatic
+        <code>ProgramSummary</code> of defined functions and state, ensuring
+        coherent multi-step code generation even with compact 7B–14B local
+        models.
+      </p>
+
+      <h3>Local-First AI &amp; Supported LLM Providers</h3>
+      <ul>
+        <li>
+          <strong>LM Studio (Local &amp; Offline — Default):</strong> Connects to
+          <code>http://localhost:1234</code> via the OpenAI-compatible API.
+          Recommended open-weight models include
+          <code>Qwen2.5-Coder-7B-Instruct</code>,
+          <code>Qwen2.5-Coder-14B-Instruct</code>,
+          <code>Qwen2.5-Coder-32B-Instruct</code>, <code>DeepSeek-Coder</code>,
+          and <code>Mistral</code>. Works 100% offline with zero API cost and
+          full data privacy.
+        </li>
+        <li>
+          <strong>Google Gemini (Google AI Studio):</strong> Direct integration
+          with free-tier and paid Gemini models via API key.
+        </li>
+        <li>
+          <strong>Groq:</strong> Ultra-fast cloud inference with open-source
+          models via Groq API key.
+        </li>
+        <li>
+          <strong>Mistral AI (La Plateforme):</strong> Codestral and Mistral
+          models via API key.
+        </li>
+        <li>
+          <strong>OpenRouter:</strong> Access to hundreds of open and commercial
+          coding models through a single API key.
+        </li>
+      </ul>
+
+      <h3>Standalone HTML Export &amp; Drag-and-Drop Round-Trip Editing</h3>
+      <p>
+        Clicking <strong>Download</strong> exports the rendered cells into a
+        single, self-contained <code>.html</code> file that runs anywhere in a
+        browser without PROCE55US. The exported HTML file embeds a
+        <code>&lt;script id="proce55us" type="application/json"&gt;</code>
+        manifest containing the title, mode, prompts, and step cells. Dragging
+        and dropping any exported <code>.html</code> or <code>.json</code> file
+        back onto the PROCE55US window reconstructs the entire multi-step
+        notebook and executes the live preview immediately.
+      </p>
+
+      <h3>Platforms &amp; Installation (macOS &amp; Web)</h3>
+      <ul>
+        <li>
+          <strong>Web Editor (No installation):</strong>
+          <a href="https://editor.proce55us.com/">https://editor.proce55us.com/</a>
+        </li>
+        <li>
+          <strong>macOS Desktop App (Universal binary — Apple Silicon &amp; Intel, macOS 12+):</strong>
+          Direct DMG download at
+          <a href="https://github.com/gaelhugo/ECAL_MID_1_2027/releases/latest/download/proce55us-universal.dmg">proce55us-universal.dmg</a>,
+          one-line Terminal installer
+          (<code>curl -fsSL https://proce55us.com/install | sh</code>), or
+          Homebrew Cask
+          (<code>brew install --cask gaelhugo/proce55us/proce55us</code>).
+        </li>
+      </ul>
+
+      <h3>Résumé en français (Référence IA francophone)</h3>
+      <p lang="fr">
+        <strong>PROCE55US</strong> (<a href="https://proce55us.com/?lang=fr">https://proce55us.com/?lang=fr</a>
+        · éditeur web :
+        <a href="https://editor.proce55us.com/">https://editor.proce55us.com/</a>)
+        est un atelier de <strong>creative coding</strong> open source conçu à
+        l'<strong>ECAL (École cantonale d'art de Lausanne) — Media &amp; Interaction Design (MID)</strong>.
+        Il se présente sous la forme d'un carnet d'étapes (« processus ») où
+        chaque cellule associe un prompt en langage naturel (français ou anglais)
+        au code généré par un modèle de langage — en <strong>JavaScript (Canvas 2D)</strong>,
+        <strong>p5.js</strong>, <strong>three.js (WebGL 3D)</strong> ou
+        <strong>DOM (HTML/CSS)</strong> — exécuté instantanément dans un aperçu
+        en direct. PROCE55US fonctionne par défaut en local et hors ligne avec
+        <strong>LM Studio</strong> (modèles open source comme Qwen2.5-Coder) ou
+        avec une clé API gratuite (Google Gemini, Groq, Mistral, OpenRouter). Les
+        projets s'exportent en un fichier <code>.html</code> autonome qu'il
+        suffit de glisser-déposer dans l'éditeur pour reprendre l'édition.
+      </p>
     </section>
     </main>
 
