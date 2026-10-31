@@ -3,13 +3,176 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PROCE55US — Prompt a processus. Watch it draw.</title>
+    <title>PROCE55US — Prompt a processus. Understand the code.</title>
     <meta
       name="description"
       content="PROCE55US is a creative-coding atelier: a notebook of steps where each cell pairs a natural-language prompt with the code an AI model generates — in JavaScript, p5.js, three.js or plain DOM — rendered live in a sandboxed preview."
     />
-    <link rel="icon" href="assets/icon.png" />
+    <meta
+      name="keywords"
+      content="PROCE55US, creative coding, p5.js, three.js, JavaScript, WebGL, DOM, AI coding notebook, LM Studio, local LLM, prompt to code, ECAL, Media & Interaction Design, interactive coding, generative art"
+    />
+    <meta name="author" content="ECAL · Media & Interaction Design (Gaël Hugo)" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#fbfbfd" />
+
+    <!-- Canonical & Internationalization (hreflang) -->
+    <link rel="canonical" href="https://proce55us.com/" />
+    <link rel="alternate" hreflang="en" href="https://proce55us.com/?lang=en" />
+    <link rel="alternate" hreflang="fr" href="https://proce55us.com/?lang=fr" />
+    <link rel="alternate" hreflang="x-default" href="https://proce55us.com/" />
+
+    <!-- Open Graph / Facebook / LinkedIn / Discord -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PROCE55US" />
+    <meta
+      property="og:title"
+      content="PROCE55US — Prompt a processus. Understand the code."
+    />
+    <meta
+      property="og:description"
+      content="A creative-coding atelier: a notebook of steps where each cell pairs a natural-language prompt with runnable code in JavaScript, p5.js, three.js or DOM — powered by local AI (LM Studio) or free cloud models."
+    />
+    <meta property="og:url" content="https://proce55us.com/" />
+    <meta property="og:image" content="https://proce55us.com/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="PROCE55US — Creative coding notebook with prompts, editable JavaScript/p5.js/three.js/DOM cells, and live preview"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="PROCE55US — Prompt a processus. Understand the code."
+    />
+    <meta
+      name="twitter:description"
+      content="A creative-coding atelier: step-by-step prompts + editable code in JavaScript, p5.js, three.js & DOM with live preview and local AI."
+    />
+    <meta name="twitter:image" content="https://proce55us.com/assets/og-image.png" />
+    <meta
+      name="twitter:image:alt"
+      content="PROCE55US — Creative coding notebook with prompts and live preview"
+    />
+
+    <!-- Icons & Web App Manifest -->
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="assets/icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
     <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet" />
+
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://proce55us.com/#website",
+            "url": "https://proce55us.com/",
+            "name": "PROCE55US",
+            "description": "Creative-coding atelier: a step-by-step notebook pairing natural-language prompts with live JavaScript, p5.js, three.js and DOM code.",
+            "inLanguage": ["en", "fr"],
+            "publisher": {
+              "@id": "https://proce55us.com/#organization"
+            }
+          },
+          {
+            "@type": "EducationalOrganization",
+            "@id": "https://proce55us.com/#organization",
+            "name": "ECAL · Media & Interaction Design",
+            "url": "https://ecal.ch/",
+            "sameAs": [
+              "https://github.com/gaelhugo/ECAL_MID_1_2027"
+            ]
+          },
+          {
+            "@type": ["SoftwareApplication", "WebApplication"],
+            "@id": "https://proce55us.com/#app",
+            "name": "PROCE55US",
+            "alternateName": "proce55us Creative Coding Atelier",
+            "url": "https://proce55us.com/",
+            "installUrl": "https://editor.proce55us.com/",
+            "downloadUrl": "https://github.com/gaelhugo/ECAL_MID_1_2027/releases/latest/download/proce55us-universal.dmg",
+            "applicationCategory": [
+              "DeveloperApplication",
+              "EducationalApplication",
+              "DesignApplication"
+            ],
+            "operatingSystem": "macOS 12+, Web Browser",
+            "softwareRequirements": "LM Studio (local AI) or Google AI Studio / Groq / Mistral / OpenRouter API key",
+            "image": "https://proce55us.com/assets/og-image.png",
+            "screenshot": [
+              "https://proce55us.com/assets/screenshot-en.png",
+              "https://proce55us.com/assets/screenshot-fr.png"
+            ],
+            "description": "PROCE55US is an open-source creative-coding notebook where each step pairs a natural-language prompt with editable JavaScript, p5.js, three.js or DOM code rendered live in a sandboxed preview.",
+            "featureList": [
+              "Step-by-step prompt-to-code creative coding notebook",
+              "Four creative modes: Vanilla JavaScript (2D Canvas), p5.js, three.js (WebGL 3D), and HTML/CSS DOM",
+              "Editable code cells with instant sandboxed live preview",
+              "Local-first AI with LM Studio or free cloud providers (Gemini, Groq, Mistral, OpenRouter)",
+              "Standalone HTML export and drag-and-drop reopen to continue editing",
+              "Bilingual interface, examples, and generated code comments (English & French)"
+            ],
+            "inLanguage": ["en", "fr"],
+            "isAccessibleForFree": true,
+            "license": "https://opensource.org/licenses/MIT",
+            "author": {
+              "@id": "https://proce55us.com/#organization"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "HowTo",
+            "@id": "https://proce55us.com/#howto",
+            "name": "How to create interactive sketches with PROCE55US",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Write a prompt",
+                "text": "Describe what the code should do — e.g. 'fill the canvas with animated particles' — in plain language."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Generate",
+                "text": "The AI model writes runnable code for the chosen mode — JavaScript, p5.js, three.js or DOM — aware of the cells above and the functions already defined."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Run & iterate",
+                "text": "Cells replay in order in the live preview. Edit the code or prompt directly, undo, or restart."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": "Export & reopen",
+                "text": "Download as a standalone HTML file, and drag & drop it back anytime to keep editing."
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <style>
       :root {
         --black: #1d1d1f;
@@ -481,9 +644,9 @@
     </style>
   </head>
   <body>
-    <nav>
+    <nav aria-label="Primary">
       <div class="wrap">
-        <img src="assets/icon.png" alt="PROCE55US icon" />
+        <img src="assets/icon.png" alt="PROCE55US icon" width="22" height="22" />
         <span class="name">PROCE55US</span>
         <span class="spacer"></span>
         <a href="#features" data-i18n="nav.features">Features</a>
@@ -510,13 +673,14 @@
       </div>
     </nav>
 
+    <main>
     <header class="hero wrap">
       <p class="eyebrow" data-i18n="hero.eyebrow">
         ECAL · Media &amp; Interaction Design
       </p>
       <h1>PROCE<span class="y">55</span>US</h1>
       <p class="tagline" data-i18n="hero.tagline">
-        Prompt a PROCESSUS. Watch it draw.
+        Prompt a PROCESSUS. Understand the code.
       </p>
       <p class="sub" data-i18n="hero.sub">
         A creative-coding atelier: a notebook of steps where each cell pairs a
@@ -547,6 +711,10 @@
         <img
           src="assets/screenshot-en.png"
           alt="The PROCE55US app: prompts and code cells on the left, live preview on the right"
+          width="1600"
+          height="1000"
+          fetchpriority="high"
+          decoding="async"
           data-i18n-alt="shot.alt"
           data-i18n-src="shot.src"
         />
@@ -728,7 +896,7 @@
 
     <section class="download" id="download">
       <div class="wrap">
-        <img src="assets/icon.png" alt="PROCE55US icon" />
+        <img src="assets/icon.png" alt="PROCE55US icon" width="72" height="72" loading="lazy" />
         <h2 data-i18n="dl.title">Download PROCE55US.</h2>
         <div class="cta">
           <a
@@ -831,6 +999,7 @@
         </div>
       </div>
     </section>
+    </main>
 
     <footer>
       <div class="wrap">
@@ -853,7 +1022,7 @@
 
     <script>
       // i18n — dictionaries in lang/<lang>.json; embedded English is the fallback
-      async function setLang(lang) {
+      async function setLang(lang, updateUrl = false) {
         try {
           const dict = await (await fetch(`lang/${lang}.json`)).json();
           document.querySelectorAll("[data-i18n]").forEach((n) => {
@@ -869,13 +1038,33 @@
             if (v != null && n.getAttribute("src") !== v)
               n.setAttribute("src", v);
           });
-          if (dict["meta.title"]) document.title = dict["meta.title"];
-          if (dict["meta.description"])
+          if (dict["meta.title"]) {
+            document.title = dict["meta.title"];
+            document
+              .querySelector('meta[property="og:title"]')
+              ?.setAttribute("content", dict["meta.title"]);
+            document
+              .querySelector('meta[name="twitter:title"]')
+              ?.setAttribute("content", dict["meta.title"]);
+          }
+          if (dict["meta.description"]) {
             document
               .querySelector('meta[name="description"]')
-              .setAttribute("content", dict["meta.description"]);
+              ?.setAttribute("content", dict["meta.description"]);
+            document
+              .querySelector('meta[property="og:description"]')
+              ?.setAttribute("content", dict["meta.description"]);
+            document
+              .querySelector('meta[name="twitter:description"]')
+              ?.setAttribute("content", dict["meta.description"]);
+          }
           document.documentElement.lang = lang;
           localStorage.setItem("proce55us.lang", lang);
+          if (updateUrl && location.protocol.startsWith("http")) {
+            const url = new URL(location.href);
+            url.searchParams.set("lang", lang);
+            history.replaceState(null, "", url);
+          }
           document
             .querySelectorAll(".langs button")
             .forEach((b) => b.classList.toggle("on", b.dataset.lang === lang));
@@ -883,6 +1072,7 @@
           /* JSON unreachable (e.g. file://) — keep embedded English */
         }
       }
+      const urlLang = new URLSearchParams(location.search).get("lang");
       const savedLang = localStorage.getItem("proce55us.lang");
       // Français si une langue préférée du navigateur commence par fr (fr-FR,
       // fr-CH, fr-CA, fr-BE…), anglais pour toutes les autres
@@ -892,11 +1082,13 @@
       const guessLang = langs.some((l) => l.toLowerCase().startsWith("fr"))
         ? "fr"
         : "en";
-      setLang(savedLang || guessLang);
+      const initialLang =
+        urlLang === "fr" || urlLang === "en" ? urlLang : savedLang || guessLang;
+      setLang(initialLang);
       document
         .querySelectorAll(".langs button")
         .forEach((b) =>
-          b.addEventListener("click", () => setLang(b.dataset.lang)),
+          b.addEventListener("click", () => setLang(b.dataset.lang, true)),
         );
 
       const io = new IntersectionObserver(

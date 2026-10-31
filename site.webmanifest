@@ -1,0 +1,17 @@
+{
+  "name": "PROCE55US — Creative Coding Atelier",
+  "short_name": "PROCE55US",
+  "description": "Prompt a processus. Understand the code. Creative coding notebook for JavaScript, p5.js, three.js and DOM with local AI (LM Studio) or cloud models.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfbfd",
+  "theme_color": "#fbfbfd",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
