@@ -32,7 +32,7 @@
   "s3.title": "Run & iterate",
   "s3.text": "Cells replay in order in the live preview. Undo, restart, or export the result as a standalone HTML page.",
   "s4.title": "Export & reopen",
-  "s4.text": "Download your work as a standalone HTML file — and drag & drop it back onto the app or web editor anytime to restore every cell and keep editing.",
+  "s4.text": "Download as a standalone HTML file, and drag & drop it back anytime to keep editing.",
   "dl.title": "Download PROCE55US.",
   "dl.button": "Download the .dmg",
   "dl.editor": "Open the web editor",
