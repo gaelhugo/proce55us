@@ -27,7 +27,7 @@
 
 ## Supported AI Models & Providers
 
-- **Local & Offline (Default — Recommended):** [LM Studio](https://lmstudio.ai) running locally on `http://localhost:1234` (OpenAI-compatible API). Works offline with open-weight coding models such as `Qwen2.5-Coder-7B-Instruct`, `Qwen2.5-Coder-14B-Instruct`, `Qwen2.5-Coder-32B-Instruct`, `DeepSeek-Coder`, or `Mistral`.
+- **Local & Offline (Default — Recommended):** [LM Studio](https://lmstudio.ai) running locally on `http://localhost:1234` (OpenAI-compatible API). Works offline with any open-weight or open-source coding model chosen by the user.
 - **Cloud Providers (Free tiers supported):**
   - Google Gemini (Google AI Studio API key)
   - Groq (GroqCloud API key)
@@ -36,4 +36,4 @@
 
 ## Résumé en français
 
-PROCE55US (https://proce55us.com/?lang=fr · éditeur web : https://editor.proce55us.com/) est un atelier de creative coding open source conçu à l'ECAL (École cantonale d'art de Lausanne — Media & Interaction Design) par Gaël Hugo. Il permet de créer et comprendre du code étape par étape (« processus ») en associant des prompts en langage naturel (français ou anglais) à du code modifiable en JavaScript (Canvas 2D), p5.js, three.js (WebGL 3D) ou DOM (HTML/CSS), avec aperçu en direct, IA locale via LM Studio (ou clés API cloud gratuites), et export/réouverture en fichier HTML autonome par glisser-déposer.
+PROCE55US (https://proce55us.com/?lang=fr · éditeur web : https://editor.proce55us.com/) est un atelier de creative coding open source conçu à l'ECAL (École cantonale d'art de Lausanne — Media & Interaction Design) par Gaël Hugo. Il permet de créer et comprendre du code étape par étape (« processus ») en associant des prompts en langage naturel (français ou anglais) à du code modifiable en JavaScript (Canvas 2D), p5.js, three.js (WebGL 3D) ou DOM (HTML/CSS), avec aperçu en direct, IA locale via LM Studio (avec n'importe quel modèle open source au choix de l'utilisateur) ou clés API cloud gratuites, et export/réouverture en fichier HTML autonome par glisser-déposer.

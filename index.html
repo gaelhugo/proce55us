@@ -197,7 +197,7 @@
                 "name": "Which AI models and providers does PROCE55US support?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "PROCE55US is local-first and works offline out of the box with LM Studio (running open-weight coding models like Qwen2.5-Coder, DeepSeek-Coder, Llama, or Mistral on localhost:1234). It also supports cloud API keys from Google Gemini (Google AI Studio), Groq, Mistral AI, and OpenRouter."
+                  "text": "PROCE55US is local-first and works offline out of the box with LM Studio (allowing users to run any preferred open-weight or open-source coding model locally on localhost:1234). It also supports cloud API keys from Google Gemini (Google AI Studio), Groq, Mistral AI, and OpenRouter."
                 }
               },
               {
@@ -1381,21 +1381,17 @@
         extend. When generating a cell, PROCE55US sends the language model the
         full code of all active preceding cells together with an automatic
         <code>ProgramSummary</code> of defined functions and state, ensuring
-        coherent multi-step code generation even with compact 7B–14B local
-        models.
+        coherent multi-step code generation with any local or cloud model.
       </p>
 
       <h3>Local-First AI &amp; Supported LLM Providers</h3>
       <ul>
         <li>
           <strong>LM Studio (Local &amp; Offline — Default):</strong> Connects to
-          <code>http://localhost:1234</code> via the OpenAI-compatible API.
-          Recommended open-weight models include
-          <code>Qwen2.5-Coder-7B-Instruct</code>,
-          <code>Qwen2.5-Coder-14B-Instruct</code>,
-          <code>Qwen2.5-Coder-32B-Instruct</code>, <code>DeepSeek-Coder</code>,
-          and <code>Mistral</code>. Works 100% offline with zero API cost and
-          full data privacy.
+          <code>http://localhost:1234</code> via the OpenAI-compatible API,
+          allowing users to run any open-source or open-weight coding model of
+          their choice locally. Works 100% offline with zero API cost and full
+          data privacy.
         </li>
         <li>
           <strong>Google Gemini (Google AI Studio):</strong> Direct integration
@@ -1406,7 +1402,7 @@
           models via Groq API key.
         </li>
         <li>
-          <strong>Mistral AI (La Plateforme):</strong> Codestral and Mistral
+          <strong>Mistral AI (La Plateforme):</strong> Cloud coding and language
           models via API key.
         </li>
         <li>
@@ -1457,10 +1453,11 @@
         <strong>p5.js</strong>, <strong>three.js (WebGL 3D)</strong> ou
         <strong>DOM (HTML/CSS)</strong> — exécuté instantanément dans un aperçu
         en direct. PROCE55US fonctionne par défaut en local et hors ligne avec
-        <strong>LM Studio</strong> (modèles open source comme Qwen2.5-Coder) ou
-        avec une clé API gratuite (Google Gemini, Groq, Mistral, OpenRouter). Les
-        projets s'exportent en un fichier <code>.html</code> autonome qu'il
-        suffit de glisser-déposer dans l'éditeur pour reprendre l'édition.
+        <strong>LM Studio</strong> (avec n'importe quel modèle open source au
+        choix de l'utilisateur) ou avec une clé API gratuite (Google Gemini,
+        Groq, Mistral, OpenRouter). Les projets s'exportent en un fichier
+        <code>.html</code> autonome qu'il suffit de glisser-déposer dans
+        l'éditeur pour reprendre l'édition.
       </p>
     </section>
     </main>
