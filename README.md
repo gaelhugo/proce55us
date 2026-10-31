@@ -1,6 +1,6 @@
 # PROCE55US — landing page
 
-The project's homepage: <https://gaelhugo.github.io/proce55us/>
+The project's homepage: <https://proce55us.com/> (web editor: <https://editor.proce55us.com/>)
 
 A single static `index.html` (no build step) + `assets/` (icon and app
 screenshot). Served by GitHub Pages from `main`, `/` root.
