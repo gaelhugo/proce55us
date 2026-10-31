@@ -458,9 +458,6 @@
       }
 
       /* ---------- steps ---------- */
-      #how {
-        background: var(--bg-alt);
-      }
       .steps {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -517,22 +514,6 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-      }
-      .step-chip code {
-        font-family: ui-monospace, "SF Mono", Menlo, monospace;
-        font-size: 11.5px;
-        color: var(--black);
-      }
-      .step-chip .y-dot {
-        color: #d4af00;
-        font-weight: 700;
-      }
-      .step-chip .g-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: #28cd41;
-        display: inline-block;
       }
       .step h3 {
         font-size: 20px;
@@ -1087,10 +1068,7 @@
           <div class="step reveal">
             <div class="step-head">
               <div class="n">1</div>
-              <span class="step-chip">
-                <span class="y-dot">✦</span>
-                <span data-i18n="s1.chip">“Draw reactive particles…”</span>
-              </span>
+              <span class="step-chip" data-i18n="s1.chip">Text</span>
             </div>
             <h3 data-i18n="s1.title">Describe</h3>
             <p data-i18n="s1.text">
@@ -1101,9 +1079,7 @@
           <div class="step reveal">
             <div class="step-head">
               <div class="n">2</div>
-              <span class="step-chip">
-                <code>function draw() { … }</code>
-              </span>
+              <span class="step-chip" data-i18n="s2.chip">Code</span>
             </div>
             <h3 data-i18n="s2.title">Generate</h3>
             <p data-i18n="s2.text">
@@ -1114,10 +1090,7 @@
           <div class="step reveal">
             <div class="step-head">
               <div class="n">3</div>
-              <span class="step-chip">
-                <span class="g-dot"></span>
-                <span data-i18n="s3.chip">Live preview · 60 fps</span>
-              </span>
+              <span class="step-chip" data-i18n="s3.chip">Preview</span>
             </div>
             <h3 data-i18n="s3.title">Run &amp; iterate</h3>
             <p data-i18n="s3.text">
@@ -1128,10 +1101,7 @@
           <div class="step reveal">
             <div class="step-head">
               <div class="n">4</div>
-              <span class="step-chip">
-                <code>sketch.html</code>
-                <span data-i18n="s4.chip">⇄ Drag &amp; drop</span>
-              </span>
+              <span class="step-chip" data-i18n="s4.chip">Drag &amp; Drop</span>
             </div>
             <h3 data-i18n="s4.title">Export &amp; edit</h3>
             <p data-i18n="s4.text">
