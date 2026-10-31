@@ -31,6 +31,6 @@ else
   sudo xattr -cr "$DEST_DIR/$APP_NAME" 2>/dev/null || true
 fi
 
-echo "✓ PROCE55US installed in $DEST_DIR/$APP_NAME (quarantine removed)"
+echo "✓ PROCE55US installed in $DEST_DIR/$APP_NAME"
 echo "→ Launching PROCE55US…"
 open -a "$DEST_DIR/$APP_NAME"
