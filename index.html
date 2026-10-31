@@ -254,13 +254,16 @@
         margin-left: 28px;
       }
       nav .langs {
-        margin-left: 28px;
-        opacity: 0.7;
+        margin-left: 24px;
+        opacity: 0.85;
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
       }
       nav .langs button {
         background: none;
         border: 0;
-        padding: 0;
+        padding: 6px 6px;
         font: inherit;
         color: inherit;
         cursor: pointer;
@@ -349,6 +352,7 @@
       }
       .shot img {
         width: 100%;
+        height: auto;
         display: block;
         border-radius: var(--radius);
         box-shadow:
@@ -626,6 +630,87 @@
         text-decoration: underline;
       }
 
+      /* ---------- mobile & tablet responsive ---------- */
+      @media (max-width: 760px) {
+        .wrap {
+          padding: 0 20px;
+        }
+        nav a[href^="#"] {
+          display: none;
+        }
+        nav a + a,
+        nav .langs {
+          margin-left: 16px;
+        }
+        .hero {
+          padding: 56px 0 40px;
+        }
+        h1 {
+          font-size: clamp(44px, 13vw, 72px);
+          margin: 14px 0;
+        }
+        .sub,
+        .lead {
+          font-size: 16px;
+        }
+        .shot {
+          margin-top: 44px;
+        }
+        section {
+          padding: 64px 0;
+        }
+        .grid,
+        .steps,
+        .paths {
+          margin-top: 36px;
+        }
+        .modes-title {
+          margin-top: 56px;
+        }
+        .modes {
+          margin-top: 28px;
+        }
+        .paths {
+          grid-template-columns: 1fr;
+        }
+        .path {
+          padding: 24px 22px;
+        }
+        .download img {
+          width: 96px;
+          height: 96px;
+          border-radius: 22px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav .wrap {
+          gap: 8px;
+        }
+        nav a + a,
+        nav .langs {
+          margin-left: 12px;
+        }
+        .cta {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 12px;
+          max-width: 320px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .btn {
+          text-align: center;
+          width: 100%;
+        }
+        footer .wrap {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 10px;
+        }
+      }
+
       /* ---------- reveal ---------- */
       .reveal {
         opacity: 0;
@@ -900,7 +985,7 @@
 
     <section class="download" id="download">
       <div class="wrap">
-        <img src="assets/icon.png" alt="PROCE55US icon" width="72" height="72" loading="lazy" />
+        <img src="assets/icon.png" alt="PROCE55US icon" width="128" height="128" loading="lazy" />
         <h2 data-i18n="dl.title">Download PROCE55US.</h2>
         <div class="cta">
           <a
