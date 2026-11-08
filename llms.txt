@@ -31,7 +31,7 @@
 - **Cloud Providers (Free tiers supported):**
   - Google Gemini (Google AI Studio API key)
   - Groq (GroqCloud API key)
-  - Mistral AI (La Plateforme API key)
+  - Cerebras (Cerebras Cloud API key)
   - OpenRouter (OpenRouter API key)
 
 ## Résumé en français
