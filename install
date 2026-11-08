@@ -9,13 +9,20 @@ if [ "$(uname -s)" != "Darwin" ]; then
 fi
 
 ZIP_URL="https://github.com/gaelhugo/ECAL_MID_1_2027/releases/latest/download/proce55us-universal-mac.zip"
+API_URL="https://api.github.com/repos/gaelhugo/ECAL_MID_1_2027/releases/latest"
 APP_NAME="proce55us.app"
 DEST_DIR="/Applications"
 TMP_DIR="$(mktemp -d)"
 trap 'rm -rf "${TMP_DIR}"' EXIT INT TERM
 
 echo "-> Downloading PROCE55US for macOS (Apple Silicon & Intel)..."
-curl -fL --progress-bar "${ZIP_URL}" -o "${TMP_DIR}/proce55us.zip"
+ASSET_URL="$(curl -fsSL "${API_URL}" 2>/dev/null | grep -B 3 '"name": "proce55us-universal-mac.zip"' | grep '"url":' | head -n 1 | cut -d '"' -f 4 || true)"
+if [ -n "${ASSET_URL}" ]; then
+  curl -fL --retry 3 --progress-bar -H "Accept: application/octet-stream" "${ASSET_URL}" -o "${TMP_DIR}/proce55us.zip" \
+    || curl -fL --retry 3 --progress-bar "${ZIP_URL}" -o "${TMP_DIR}/proce55us.zip"
+else
+  curl -fL --retry 3 --progress-bar "${ZIP_URL}" -o "${TMP_DIR}/proce55us.zip"
+fi
 
 echo "-> Extracting ${APP_NAME}..."
 ditto -x -k "${TMP_DIR}/proce55us.zip" "${TMP_DIR}"
