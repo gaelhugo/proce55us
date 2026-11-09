@@ -23,17 +23,8 @@
       content="VkD9MIZCRKIljG7kJRKy1YEb3L022FZIkP92Y52PVhQ"
     />
 
-    <!-- Canonical & Internationalization (hreflang) -->
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://proce55us.com/" />
-    <link rel="alternate" hreflang="en" href="https://proce55us.com/?lang=en" />
-    <link rel="alternate" hreflang="fr" href="https://proce55us.com/?lang=fr" />
-    <link rel="alternate" hreflang="x-default" href="https://proce55us.com/" />
-    <link
-      rel="alternate"
-      type="text/plain"
-      href="https://proce55us.com/llms.txt"
-      title="PROCE55US — AI Agent & LLM Reference (llms.txt)"
-    />
 
     <!-- Open Graph / Facebook / LinkedIn / Discord -->
     <meta property="og:type" content="website" />
@@ -1571,7 +1562,7 @@
 
       <h3>Résumé en français (Référence IA francophone)</h3>
       <p lang="fr">
-        <strong>PROCE55US</strong> (<a href="https://proce55us.com/?lang=fr">https://proce55us.com/?lang=fr</a>
+        <strong>PROCE55US</strong> (<a href="https://proce55us.com/">https://proce55us.com/</a>
         · éditeur web :
         <a href="https://editor.proce55us.com/">https://editor.proce55us.com/</a>)
         est un atelier de <strong>creative coding</strong> open source conçu par
@@ -1650,10 +1641,10 @@
           }
           document.documentElement.lang = lang;
           localStorage.setItem("proce55us.lang", lang);
-          if (updateUrl && location.protocol.startsWith("http")) {
+          if (location.protocol.startsWith("http") && location.search.includes("lang=")) {
             const url = new URL(location.href);
-            url.searchParams.set("lang", lang);
-            history.replaceState(null, "", url);
+            url.searchParams.delete("lang");
+            history.replaceState(null, "", url.pathname + url.search + url.hash);
           }
           document
             .querySelectorAll(".langs button")
